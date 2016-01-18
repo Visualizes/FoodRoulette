@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textSize="32dp"
+        android:gravity="center"
+        android:text="Transportation Selection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RadioGroup
+        android:id="@+id/myRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <RadioButton
+            android:text="Walk"
+            android:button="@null"
+            android:background="@drawable/checkbox_background"
+            android:layout_margin="2dp"
+            android:id="@+id/walkButton"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <RadioButton
+            android:text="Bike"
+            android:button="@null"
+            android:id="@+id/bikeButton"
+            android:background="@drawable/checkbox_background"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <RadioButton
+            android:text="Car"
+            android:button="@null"
+            android:background="@drawable/checkbox_background"
+            android:layout_margin="2dp"
+            android:id="@+id/carButton"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <RadioButton
+            android:text="Public Transport"
+            android:button="@null"
+            android:background="@drawable/checkbox_background"
+            android:layout_margin="2dp"
+            android:id="@+id/publicTransportButton"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:text="Back"
+            android:id="@+id/backButtonTS"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:text="Next"
+            android:id="@+id/nextButtonTS"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>
