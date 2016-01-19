@@ -8,8 +8,8 @@ import java.io.Serializable;
 public class UserChoices implements Serializable {
 
     private String transportChoice;
-    private int startingPrice;
-    private int endingPrice;
+    private double startingPrice;
+    private double endingPrice;
     private String restaurantTypeChoice;
     private String styleOfFoodChoice;
 
@@ -17,20 +17,20 @@ public class UserChoices implements Serializable {
         this.transportChoice = transportChoice;
     }
 
-    public UserChoices(String transportChoice, int startingPrice, int endingPrice) {
+    public UserChoices(String transportChoice, double startingPrice, double endingPrice) {
         this.transportChoice = transportChoice;
         this.startingPrice = startingPrice;
         this.endingPrice = endingPrice;
     }
 
-    public UserChoices(String transportChoice, int startingPrice, int endingPrice, String restaurantTypeChoice) {
+    public UserChoices(String transportChoice, double startingPrice, double endingPrice, String restaurantTypeChoice) {
         this.transportChoice = transportChoice;
         this.startingPrice = startingPrice;
         this.endingPrice = endingPrice;
         this.restaurantTypeChoice = restaurantTypeChoice;
     }
 
-    public UserChoices(String transportChoice, int startingPrice, int endingPrice, String restaurantTypeChoice, String styleOfFoodChoice) {
+    public UserChoices(String transportChoice, double startingPrice, double endingPrice, String restaurantTypeChoice, String styleOfFoodChoice) {
         this.transportChoice = transportChoice;
         this.startingPrice = startingPrice;
         this.endingPrice = endingPrice;
@@ -42,11 +42,11 @@ public class UserChoices implements Serializable {
         return transportChoice;
     }
 
-    public int getStartingPrice() {
+    public double getStartingPrice() {
         return startingPrice;
     }
 
-    public int getEndingPrice() {
+    public double getEndingPrice() {
         return endingPrice;
     }
 

@@ -1,8 +1,10 @@
 package com.example.ramik.foodroulette;
 
+import android.app.Activity;
 import android.content.Context;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -16,12 +18,15 @@ public class StyleOfFoodSearch implements TextWatcher {
     private List<String> mock;
     private Context context;
     private ListView listView;
-    public String styleOfFoodChoice;
+    public List<String> mockUpdated;
+    private StyleOfFoodAdapter styleOfFoodAdapter;
 
-    public StyleOfFoodSearch(List<String> mock, ListView listView, Context context){
+    public StyleOfFoodSearch(List<String> mock, ListView listView, Context context, StyleOfFoodAdapter styleOfFoodAdapter){
         this.mock = mock;
         this.listView = listView;
         this.context = context;
+        this.styleOfFoodAdapter = styleOfFoodAdapter;
+        mockUpdated = mock;
     }
 
 
@@ -32,7 +37,11 @@ public class StyleOfFoodSearch implements TextWatcher {
     @Override
     public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-        List<String> mockUpdated = new ArrayList<>();
+        mockUpdated = new ArrayList<>();
+
+        Button button = (Button) ((Activity)context).findViewById(R.id.nextButtonSOF);
+        button.setText("Pick for me");
+        styleOfFoodAdapter.updateIsSelected(false);
 
         for (int i = 0; i < mock.size(); i++){
 
@@ -50,15 +59,14 @@ public class StyleOfFoodSearch implements TextWatcher {
         StyleOfFoodAdapter styleOfFoodAdapter = new StyleOfFoodAdapter(context, mockUpdated);
         listView.setAdapter(styleOfFoodAdapter);
 
-        styleOfFoodChoice = mockUpdated.get(styleOfFoodAdapter.getPos());
     }
 
     @Override
     public void afterTextChanged(Editable s) {
     }
 
-    public String getStyleOfFoodChoice(){
-        return styleOfFoodChoice;
+    public List<String> getUpdatedSearchList(){
+        return mockUpdated;
     }
 
 }

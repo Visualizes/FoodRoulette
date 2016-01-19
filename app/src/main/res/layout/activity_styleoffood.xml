@@ -41,7 +41,7 @@
         <Button
             android:layout_gravity="bottom"
             android:gravity="center"
-            android:text="Next"
+            android:text="Pick for me"
             android:id="@+id/nextButtonSOF"
             android:layout_width="0dp"
             android:layout_weight="1"
