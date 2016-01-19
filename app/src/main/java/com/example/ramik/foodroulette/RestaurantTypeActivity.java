@@ -19,12 +19,12 @@ public class RestaurantTypeActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_restauranttype);
 
         Bundle extras = getIntent().getExtras();
         userChoices = (UserChoices) extras.get("UserChoices");
 
-        RadioGroup radioGroup = (RadioGroup) findViewById(R.id.myRadioGroup);
+        RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radioGroupRT);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -32,7 +32,7 @@ public class RestaurantTypeActivity extends Activity {
             }
         });
 
-        Button nextButton = (Button) findViewById(R.id.nextButtonTS);
+        Button nextButton = (Button) findViewById(R.id.nextButtonRT);
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

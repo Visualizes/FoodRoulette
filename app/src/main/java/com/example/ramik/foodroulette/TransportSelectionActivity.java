@@ -20,7 +20,7 @@ public class TransportSelectionActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transportationselection);
 
-        RadioGroup radioGroup = (RadioGroup) findViewById(R.id.myRadioGroup);
+        RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radioGroupTS);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {

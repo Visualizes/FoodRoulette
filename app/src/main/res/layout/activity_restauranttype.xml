@@ -10,7 +10,7 @@
         android:layout_height="wrap_content" />
 
     <RadioGroup
-        android:id="@+id/myRadioGroup"
+        android:id="@+id/radioGroupRT"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
@@ -58,7 +58,7 @@
             android:layout_gravity="bottom"
             android:gravity="center"
             android:text="Back"
-            android:id="@+id/backButtonTS"
+            android:id="@+id/backButtonRT"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content" />
@@ -67,7 +67,7 @@
             android:layout_gravity="bottom"
             android:gravity="center"
             android:text="Next"
-            android:id="@+id/nextButtonTS"
+            android:id="@+id/nextButtonRT"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content" />
