@@ -19,13 +19,11 @@ public class StyleOfFoodSearch implements TextWatcher {
     private Context context;
     private ListView listView;
     public List<String> mockUpdated;
-    private StyleOfFoodAdapter styleOfFoodAdapter;
 
-    public StyleOfFoodSearch(List<String> mock, ListView listView, Context context, StyleOfFoodAdapter styleOfFoodAdapter){
+    public StyleOfFoodSearch(List<String> mock, ListView listView, Context context){
         this.mock = mock;
         this.listView = listView;
         this.context = context;
-        this.styleOfFoodAdapter = styleOfFoodAdapter;
         mockUpdated = mock;
     }
 
@@ -41,7 +39,6 @@ public class StyleOfFoodSearch implements TextWatcher {
 
         Button button = (Button) ((Activity)context).findViewById(R.id.nextButtonSOF);
         button.setText("Pick for me");
-        styleOfFoodAdapter.updateIsSelected(false);
 
         for (int i = 0; i < mock.size(); i++){
 
@@ -57,6 +54,7 @@ public class StyleOfFoodSearch implements TextWatcher {
         }
 
         StyleOfFoodAdapter styleOfFoodAdapter = new StyleOfFoodAdapter(context, mockUpdated);
+        styleOfFoodAdapter.updateIsSelected(false);
         listView.setAdapter(styleOfFoodAdapter);
 
     }

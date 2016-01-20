@@ -54,7 +54,7 @@ public class StyleOfFoodActivity extends Activity {
         listView.setAdapter(styleOfFoodAdapter);
 
         final EditText styleInput = (EditText) findViewById(R.id.styleInput);
-        final StyleOfFoodSearch styleOfFoodSearch = new StyleOfFoodSearch(mock, listView, this, styleOfFoodAdapter);
+        final StyleOfFoodSearch styleOfFoodSearch = new StyleOfFoodSearch(mock, listView, this);
         styleInput.addTextChangedListener(styleOfFoodSearch);
 
         final Button nextButton = (Button) findViewById(R.id.nextButtonSOF);
@@ -69,6 +69,7 @@ public class StyleOfFoodActivity extends Activity {
                     styleOfFoodChoice = mock.get(random);
                 }
                 else{
+                    //they did click a choice
                     int position = styleOfFoodAdapter.getPosition();
                     List<String> updatedSearchList = styleOfFoodSearch.getUpdatedSearchList();
                     styleOfFoodChoice = updatedSearchList.get(position);

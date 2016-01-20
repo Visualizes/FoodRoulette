@@ -34,7 +34,7 @@ public class PriceRangeActivity extends Activity {
 
                 String startingPrice_STRING = startingPriceInput.getText().toString();
                 String endingPrice_STRING = endingPriceInput.getText().toString();
-                
+
                 if (!startingPrice_STRING.equals("") && !endingPrice_STRING.equals("")){
 
                     double startingPrice = Double.parseDouble(startingPrice_STRING);
