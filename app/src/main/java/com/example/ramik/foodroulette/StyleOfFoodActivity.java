@@ -67,18 +67,25 @@ public class StyleOfFoodActivity extends Activity {
                     int range = mock.size();
                     int random = (int) (Math.random() * range);
                     styleOfFoodChoice = mock.get(random);
-                }
-                else{
+                } else {
                     //they did click a choice
                     int position = styleOfFoodAdapter.getPosition();
                     List<String> updatedSearchList = styleOfFoodSearch.getUpdatedSearchList();
                     styleOfFoodChoice = updatedSearchList.get(position);
                 }
 
-                userChoices = new UserChoices(userChoices.getTransportChoice(), userChoices.getStartingPrice(), userChoices.getEndingPrice(), userChoices.getRestaurantTypeChoice(), styleOfFoodChoice);
+                userChoices = new UserChoices(userChoices.getTransportChoice(), userChoices.getDollarChoice(), userChoices.getRestaurantTypeChoice(), styleOfFoodChoice);
                 Intent i = new IntentNavigation(StyleOfFoodActivity.this, MainActivity.class, userChoices).getIntent();
                 startActivity(i);
 
+            }
+        });
+
+        Button backButton = (Button) findViewById(R.id.backButtonSOF);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 

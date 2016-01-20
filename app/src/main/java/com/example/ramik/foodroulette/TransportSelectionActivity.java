@@ -46,7 +46,8 @@ public class TransportSelectionActivity extends Activity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                //not ready until LocationSelectionActivity is complete
+                //finish();
             }
         });
 

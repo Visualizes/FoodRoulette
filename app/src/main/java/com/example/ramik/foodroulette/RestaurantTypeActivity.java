@@ -37,12 +37,20 @@ public class RestaurantTypeActivity extends Activity {
             @Override
             public void onClick(View v) {
                 if (restaurantTypeChoice != null) {
-                    userChoices = new UserChoices(userChoices.getTransportChoice(), userChoices.getStartingPrice(), userChoices.getEndingPrice(), restaurantTypeChoice);
+                    userChoices = new UserChoices(userChoices.getTransportChoice(), userChoices.getDollarChoice(), restaurantTypeChoice);
                     Intent i = new IntentNavigation(RestaurantTypeActivity.this, StyleOfFoodActivity.class, userChoices).getIntent();
                     startActivity(i);
                 } else {
                     Toast.makeText(RestaurantTypeActivity.this, "Please select a type of restaurant.", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        Button backButton = (Button) findViewById(R.id.backButtonRT);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }

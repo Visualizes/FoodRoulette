@@ -8,8 +8,7 @@ import java.io.Serializable;
 public class UserChoices implements Serializable {
 
     private String transportChoice;
-    private double startingPrice;
-    private double endingPrice;
+    int dollarChoice;
     private String restaurantTypeChoice;
     private String styleOfFoodChoice;
 
@@ -17,23 +16,20 @@ public class UserChoices implements Serializable {
         this.transportChoice = transportChoice;
     }
 
-    public UserChoices(String transportChoice, double startingPrice, double endingPrice) {
+    public UserChoices(String transportChoice, int dollarChoice) {
         this.transportChoice = transportChoice;
-        this.startingPrice = startingPrice;
-        this.endingPrice = endingPrice;
+        this.dollarChoice = dollarChoice;
     }
 
-    public UserChoices(String transportChoice, double startingPrice, double endingPrice, String restaurantTypeChoice) {
+    public UserChoices(String transportChoice, int dollarChoice, String restaurantTypeChoice) {
         this.transportChoice = transportChoice;
-        this.startingPrice = startingPrice;
-        this.endingPrice = endingPrice;
+        this.dollarChoice = dollarChoice;
         this.restaurantTypeChoice = restaurantTypeChoice;
     }
 
-    public UserChoices(String transportChoice, double startingPrice, double endingPrice, String restaurantTypeChoice, String styleOfFoodChoice) {
+    public UserChoices(String transportChoice, int dollarChoice, String restaurantTypeChoice, String styleOfFoodChoice) {
         this.transportChoice = transportChoice;
-        this.startingPrice = startingPrice;
-        this.endingPrice = endingPrice;
+        this.dollarChoice = dollarChoice;
         this.restaurantTypeChoice = restaurantTypeChoice;
         this.styleOfFoodChoice = styleOfFoodChoice;
     }
@@ -42,12 +38,8 @@ public class UserChoices implements Serializable {
         return transportChoice;
     }
 
-    public double getStartingPrice() {
-        return startingPrice;
-    }
-
-    public double getEndingPrice() {
-        return endingPrice;
+    public int getDollarChoice() {
+        return dollarChoice;
     }
 
     public String getRestaurantTypeChoice() {

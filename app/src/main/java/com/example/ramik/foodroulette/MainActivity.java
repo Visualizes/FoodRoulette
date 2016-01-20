@@ -16,18 +16,16 @@ public class MainActivity extends Activity {
         UserChoices userChoices = (UserChoices) extras.get("UserChoices");
 
         String transportChoice = userChoices.getTransportChoice();
-        double startingPrice = userChoices.getStartingPrice();
-        double endingPrice= userChoices.getEndingPrice();
+        int dollarChoice = userChoices.getDollarChoice();
         String restaurantTypeChoice = userChoices.getRestaurantTypeChoice();
         String styleOfFoodChoice = userChoices.getStyleOfFoodChoice();
 
         System.out.println(transportChoice);
-        System.out.println(startingPrice);
-        System.out.println(endingPrice);
+        System.out.println(dollarChoice);
         System.out.println(restaurantTypeChoice);
         System.out.println(styleOfFoodChoice);
 
         TextView textView = (TextView) findViewById(R.id.textview);
-        textView.setText(transportChoice + ", " + startingPrice + ", " + endingPrice + ", " + restaurantTypeChoice + ", " + styleOfFoodChoice);
+        textView.setText(transportChoice + ", " + dollarChoice + ", " + restaurantTypeChoice + ", " + styleOfFoodChoice);
     }
 }
