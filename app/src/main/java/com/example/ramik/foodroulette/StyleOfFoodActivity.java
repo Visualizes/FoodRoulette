@@ -74,7 +74,7 @@ public class StyleOfFoodActivity extends Activity {
                     styleOfFoodChoice = updatedSearchList.get(position);
                 }
 
-                userChoices = new UserChoices(userChoices.getTransportChoice(), userChoices.getDollarChoice(), userChoices.getRestaurantTypeChoice(), styleOfFoodChoice);
+                userChoices.setStyleOfFoodChoice(styleOfFoodChoice);
                 Intent i = new IntentNavigation(StyleOfFoodActivity.this, MainActivity.class, userChoices).getIntent();
                 startActivity(i);
 

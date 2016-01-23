@@ -85,7 +85,7 @@ public class PriceRangeActivity extends Activity {
             public void onClick(View v) {
 
                 if (dollarChoice != 0) {
-                    userChoices = new UserChoices(userChoices.getTransportChoice(), dollarChoice);
+                    userChoices.setDollarChoice(dollarChoice);
                     Intent i = new IntentNavigation(PriceRangeActivity.this, RestaurantTypeActivity.class, userChoices).getIntent();
                     startActivity(i);
                 }

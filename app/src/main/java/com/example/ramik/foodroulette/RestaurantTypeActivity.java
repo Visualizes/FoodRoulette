@@ -37,7 +37,7 @@ public class RestaurantTypeActivity extends Activity {
             @Override
             public void onClick(View v) {
                 if (restaurantTypeChoice != null) {
-                    userChoices = new UserChoices(userChoices.getTransportChoice(), userChoices.getDollarChoice(), restaurantTypeChoice);
+                    userChoices.setRestaurantTypeChoice(restaurantTypeChoice);
                     Intent i = new IntentNavigation(RestaurantTypeActivity.this, StyleOfFoodActivity.class, userChoices).getIntent();
                     startActivity(i);
                 } else {

@@ -20,6 +20,9 @@ public class TransportSelectionActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transportationselection);
 
+        Bundle extras = getIntent().getExtras();
+        final UserChoices userChoices = (UserChoices) extras.get("UserChoices");
+
         RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radioGroupTS);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -33,7 +36,7 @@ public class TransportSelectionActivity extends Activity {
             @Override
             public void onClick(View v) {
                 if (transportationChoice != null) {
-                    UserChoices userChoices = new UserChoices(transportationChoice);
+                    userChoices.setTransportChoice(transportationChoice);
                     Intent i = new IntentNavigation(TransportSelectionActivity.this, PriceRangeActivity.class, userChoices).getIntent();
                     startActivity(i);
                 } else {
